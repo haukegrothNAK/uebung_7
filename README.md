@@ -13,5 +13,5 @@
 
 ## ```static```
 
-* Modifizieren Sie Ihre Klasse ```Auto``` derart, dass das Tankvolumen als statische Variable implementiert ist.
-* Jedes Auto soll dasselbe Tankvolumen haben, das Tankvolumen darf nicht mehr individuell verschieden sein.
+* Fügen Sie ein neues Attribut ```fahrgestellnummer``` hinzu, welche beim Erzeugen eines Autos automatisch (d.h. nicht über einen Konstruktorparameter) zugewiesen werden soll
+* Es dürfen niemals zwei Autos dieselbe Fahrgestellnummer bekommen. Stellen Sie dies sicher, indem Sie sich die zuletzt vergebene Fahrgestellnummer als statisches Attribut der Klasse ```Auto``` merken.

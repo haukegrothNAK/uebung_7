@@ -1,34 +1,44 @@
 public class Auto {
-	public double kilometerstand;
+	private double kilometerstand;
 
-	public double tankinhalt;
+	private double tankinhalt;
 
-	public double maxTankVolumen;
+	private final double maxTankVolumen;
 
-	public double verbrauchProKm;
+	private final double verbrauchProKm;
 
-	public double profiltiefeReifen;
+	private double profiltiefeReifen;
 
-	public double profiltiefeNeuerReifen = 0.8;
+	private final double profiltiefeNeuerReifen = 0.8;
 
-	public double minimalErlaubteProfiltiefe = 0.3;
+	private final double minimalErlaubteProfiltiefe = 0.3;
 
-	public double reifenabnutzungProKm = 0.00025;
+	private final double reifenabnutzungProKm = 0.00025;
 
-	public String wagenname;
+	private String wagenname;
 
 	public Person fahrer;
+	
+	private static int naechstefahrgestellnummer=1;
+	
+	private final int fahrgestellnummer;
 
 	public Auto(double maxTankVolumen, double verbrauchProKm, String wagenname) {
 		this.maxTankVolumen = maxTankVolumen;
 		this.verbrauchProKm = verbrauchProKm;
 		this.wagenname = wagenname;
+		this.fahrgestellnummer=naechstefahrgestellnummer;
+		naechstefahrgestellnummer=naechstefahrgestellnummer+1;
 
 		// gleich volltanken und frische Reifen drauf
 		tanken();
 		wechsleReifen();
 	}
 
+	public int getFahrgestellnummer() {
+		return fahrgestellnummer;
+	}
+	
 	public Person getFahrer() {
 		return fahrer;
 	}

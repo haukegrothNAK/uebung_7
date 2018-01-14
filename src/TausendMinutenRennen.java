@@ -35,6 +35,9 @@ public class TausendMinutenRennen {
 			}
 
 		}
+		for(Auto each : autos) {
+			System.out.println(each.getWagenname()+" hat die Fahrgestellnummer: "+each.getFahrgestellnummer());
+		}
 
 	}
 
